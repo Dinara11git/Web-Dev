@@ -1,0 +1,26 @@
+<div class="albums-container">
+  <h1>Albums</h1>
+  
+  <div *ngIf="loading" class="loading">
+    Loading albums...
+  </div>
+
+  <div *ngIf="error" class="error">
+    {{ error }}
+  </div>
+
+  <div *ngIf="!loading && !error && albums.length === 0" class="empty-state">
+    No albums found.
+  </div>
+
+  <div class="albums-grid" *ngIf="!loading && !error && albums.length > 0">
+    <div *ngFor="let album of albums" class="album-card">
+      <div class="album-content" (click)="viewAlbum(album.id)">
+        <h3>{{ album.title }}</h3>
+        <p>Album ID: {{ album.id }}</p>
+        <p>User ID: {{ album.userId }}</p>
+      </div>
+      <button class="delete-btn" (click)="deleteAlbum(album.id, $event)">Delete</button>
+    </div>
+  </div>
+</div>
