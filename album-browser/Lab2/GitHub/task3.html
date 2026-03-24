@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GitHub Pricing Layout</title>
+<style>
+:root{
+  --bg:#0d1117;
+  --card:#161b22;
+  --border:#30363d;
+  --muted:#8b949e;
+  --primary:#2da44e;
+}
+*{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;}
+body{margin:0;background:var(--bg);color:#e6edf3;}
+.container{max-width:1100px;margin:0 auto;padding:48px 20px;}
+
+/* HERO */
+.hero{max-width:720px;margin-bottom:64px;}
+.hero h1{font-size:48px;line-height:1.1;margin:0 0 16px 0;}
+.hero p{color:var(--muted);font-size:18px;margin:0 0 24px 0;}
+.hero .cta{background:var(--primary);color:white;border:none;border-radius:8px;padding:14px 20px;font-size:16px;font-weight:600;cursor:pointer;}
+
+/* PRICING CARDS */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:64px;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;display:flex;flex-direction:column;}
+.badge{align-self:flex-start;background:#1f6feb;color:white;font-size:12px;padding:4px 8px;border-radius:999px;margin-bottom:10px;}
+.card h3{margin:0 0 8px 0;font-size:22px;}
+.price{font-size:28px;font-weight:700;margin:8px 0;}
+.price span{font-size:14px;color:var(--muted);font-weight:400;}
+.card p{color:var(--muted);font-size:14px;line-height:1.5;flex-grow:1;}
+.card ul{padding-left:18px;color:var(--muted);font-size:14px;}
+.card li{margin:6px 0;}
+.card .btn{margin-top:20px;background:transparent;color:white;border:1px solid var(--border);border-radius:8px;padding:10px 12px;font-weight:600;cursor:pointer;}
+.card .btn.primary{background:var(--primary);border-color:var(--primary);}
+
+/* ADD-ONS */
+.addons h2{margin:0 0 20px 0;font-size:28px;}
+.addon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.addon-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;}
+.addon-card h4{margin:0 0 8px 0;font-size:18px;}
+.addon-card p{margin:0;color:var(--muted);font-size:14px;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .pricing-grid{grid-template-columns:1fr;}
+  .addon-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <section class="hero">
+    <h1>Try the Copilot-powered platform</h1>
+    <p>Accelerate innovation across your entire developer workflow with AI-native tools, secure collaboration, and enterprise-grade scale.</p>
+    <button class="cta">Start a free trial</button>
+  </section>
+
+  <section class="pricing-grid">
+    <div class="card">
+      <span class="badge">Free</span>
+      <h3>Free</h3>
+      <div class="price">$0 <span>/ user / month</span></div>
+      <p>For individuals and small projects getting started with GitHub.</p>
+      <ul>
+        <li>Unlimited public repositories</li>
+        <li>Basic code collaboration</li>
+        <li>Community support</li>
+      </ul>
+      <button class="btn">Sign up for free</button>
+    </div>
+
+    <div class="card">
+      <span class="badge">Team</span>
+      <h3>Team</h3>
+      <div class="price">$4 <span>/ user / month</span></div>
+      <p>For growing teams that need advanced collaboration and security.</p>
+      <ul>
+        <li>Private repositories</li>
+        <li>Team permissions</li>
+        <li>Security features</li>
+      </ul>
+      <button class="btn primary">Start Team</button>
+    </div>
+
+    <div class="card">
+      <span class="badge">Enterprise</span>
+      <h3>Enterprise</h3>
+      <div class="price">Contact sales</div>
+      <p>For organizations that require compliance, scalability, and control.</p>
+      <ul>
+        <li>Advanced security</li>
+        <li>Centralized management</li>
+        <li>24/7 support</li>
+      </ul>
+      <button class="btn">Contact sales</button>
+    </div>
+  </section>
+
+  <section class="addons">
+    <h2>Additional add-ons</h2>
+    <div class="addon-grid">
+      <div class="addon-card">
+        <h4>GitHub Copilot</h4>
+        <p>AI pair programmer that writes code with you.</p>
+      </div>
+      <div class="addon-card">
+        <h4>Advanced Security</h4>
+        <p>Code scanning, secret scanning, and dependency review.</p>
+      </div>
+      <div class="addon-card">
+        <h4>Codespaces</h4>
+        <p>Cloud-based development environments.</p>
+      </div>
+      <div class="addon-card">
+        <h4>GitHub Pages</h4>
+        <p>Host static websites directly from your repo.</p>
+      </div>
+      <div class="addon-card">
+        <h4>Actions Minutes</h4>
+        <p>Extra CI/CD compute minutes.</p>
+      </div>
+      <div class="addon-card">
+        <h4>Storage</h4>
+        <p>Additional Git LFS and artifact storage.</p>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+
+*{box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;}
+body{margin:0;background:#ffffff;color:#000;}
+.page{display:grid;grid-template-columns:1.2fr 1fr;min-height:100vh;max-width:1200px;margin:0 auto;padding:40px 20px;gap:60px;}
+
+/* Left side */
+.left{display:flex;flex-direction:column;justify-content:flex-start;}
+.top-logo img{width:48px;}
+.hero-text{margin:30px 0 20px;font-size:32px;line-height:1.25;font-weight:600;}
+.hero-text span{color:#ff3040;}
+
+.cards{position:relative;width:100%;max-width:520px;height:360px;margin-top:20px;}
+.card{position:absolute;border-radius:16px;overflow:hidden;
+      box-shadow:0 10px 25px rgba(0,0,0,.15);}
+.card img{width:100%;height:100%;object-fit:cover;}
+.card.main{width:300px;height:330px;left:80px;top:0;z-index:3;}
+.card.left{width:220px;height:280px;left:0;top:40px;z-index:1;transform:rotate(-4deg);}
+.card.right{width:220px;height:280px;right:0;top:40px;z-index:2;transform:rotate(4deg);}
+
+/* Right side */
+.right{display:flex;flex-direction:column;align-items:center;}
+.login-box{width:360px;border:1px solid #dbdbdb;border-radius:12px;
+           padding:30px 28px 18px;text-align:center;}
+.login-title{font-size:18px;margin-bottom:18px;font-weight:600;}
+
+input{width:100%;padding:10px 12px;margin:6px 0;
+      border:1px solid #dbdbdb;border-radius:10px;
+      background:#fafafa;font-size:14px;}
+
+.login-btn{width:100%;margin-top:8px;padding:10px;border:none;
+            border-radius:12px;background:#0095f6;color:white;
+            font-weight:600;font-size:14px;cursor:pointer;}
+.login-btn:hover{background:#007dd1;}
+
+.forgot{display:block;margin:10px 0;font-size:12px;
+        color:#00376b;text-decoration:none;}
+
+.fb-btn{width:100%;margin-top:6px;padding:10px;
+        border:1px solid #dbdbdb;border-radius:12px;
+        background:white;color:#385185;font-weight:600;font-size:14px;
+        text-decoration:none;display:flex;align-items:center;
+        justify-content:center;gap:6px;}
+.fb-btn img{width:16px;}
+
+.signup-box{width:360px;margin-top:10px;border:1px solid #dbdbdb;
+            border-radius:12px;padding:16px;text-align:center;font-size:14px;}
+.signup-box a{color:#0095f6;text-decoration:none;font-weight:600;}
+
+.meta{margin-top:16px;font-size:12px;color:#8e8e8e;}
+
+/* Footer */
+.footer{grid-column:1/3;margin-top:40px;font-size:12px;
+        color:#8e8e8e;text-align:center;}
+.footer a{color:#8e8e8e;text-decoration:none;margin:0 6px;}
+
+@media(max-width:900px){
+  .page{grid-template-columns:1fr;}
+  .cards{display:none;}
+}
